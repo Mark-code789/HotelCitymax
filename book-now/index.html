@@ -1,1 +1,236 @@
-
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <meta name="theme-color" content="#fff">
+        <meta name="description" content="Welcome to Hotel Citymax. Destination for holiday accommodation, conferencing and restaurant.">
+        <link rel="manifest" href="../manifest.webmanifest">
+        <link rel="icon" href="../src/images/icon.ico" type="image/x-icon">
+        <link rel="icon" href="../src/images/icon 16x16.png" type="image/png" sizes="16x16">
+        <link rel="icon" href="../src/images/icon 32x32.png" type="image/png" sizes="32x32">
+        <link rel="icon" href="../src/images/icon 96x96.png" type="image/png" sizes="96x96">
+        <link rel="stylesheet" href="./index.css">
+        <title>Book Now: Hotel Citymax - find excellent accommodation, restaurant and conference services at affordable prices.</title>
+	</head>
+	<body style='overflow:hidden;'>
+		<div class='loader'>
+			<span class="spinner"></span>
+		</div>
+		<header> 
+			<div>
+				<img src="../src/images/ring logo.png">
+				<h1>CITYMAX<span>Comfort away from home</span></h1>
+			</div>
+			<div>
+				<nav>
+					<a href="../index.html">HOME</a> 
+					<a href="../accommodation/index.html">ACCOMMODATION</a> 
+					<a href="../conferencing/index.html">CONFERENCING</a>
+					<a href="../restaurant/index.html">RESTAURANT</a> 
+					<a href='#reservations'>CONTACT</a>
+				</nav>
+				<nav>
+					<a href="mailto:info@hotelcitymax.co.ke"></a>
+					<a href="https://wa.me/+254711853328?"></a>
+					<a href="tel:+254772296760"></a>
+					<a href="https://www.facebook.com/hotelcitymax/"></a>
+					<a href="https://www.instagram.com/citymaxhotel/"></a>
+				</nav>
+			</div>
+			<div></div>
+		</header>
+		<article class='main'>
+			<section>
+				<h1>BOOK NOW<br><span></span><br><span>Comfort away from home</span></h1>
+				<a href='#form'></a>
+			</section>
+		</article>
+		<article class="form" id='form'>
+			<form method='POST' action=''>
+				<div>
+					<p>
+						<label for='service'>Service</label>
+						<select id='service' name='service'>
+							<option value='accommodation'>Accommodation</option>
+							<option value='conferencing'>Conferencing</option>
+						</select>
+					</p>
+				</div>
+				<div class='accommodation'>
+					<p>
+						<label for='room'>Room</label>
+						<select id='room' name='room'>
+							<option value='deluxe'>Deluxe</option>
+							<option value='superior'>Superior</option>
+							<option value='tripple'>Tripple</option>
+							<option value='Twin'>Twin</option>
+							<option value='Standard'>Standard</option>
+						</select>
+					</p>
+					<p>
+						<label for='board'>Board</label>
+						<select id='board' name='board'>
+							<option value='BB'>Bed & Breakfast</option>
+							<option value='HB'>Half Board (Bed, Breakfast & Dinner)</option>
+							<option value='FB'>Full Board (Bed, Breakfast, Lunch & Dinner)</option>
+							<option value='BO'>Bed Only</option>
+						</select>
+					</p>
+					<p>
+						<label for='check-in-date'>Check in date</label>
+						<input type='date' id='check-in-date' name='check-in-date' required>
+						<small>Please provide date for arrival</small>
+					</p>
+					<p>
+						<label for='check-out-date'>Check out date</label>
+						<input type='date' id='check-out-date' name='check-out-date' required>
+						<small>Please provide date for departure</small>
+					</p>
+					<p>
+						<label for='adults'>Adults</label>
+						<select id='adults' name='adults'>
+							<option value='1'>1</option>
+							<option value='2'>2</option>
+							<option value='3'>3</option>
+						</select>
+					</p>
+					<p>
+						<label for='children'>Children</label>
+						<select id='children' name='children'>
+							<option value='0'>0</option>
+							<option value='1'>1</option>
+							<option value='2'>2</option>
+							<option value='3'>3</option>
+							<option value='4'>5</option>
+						</select>
+					</p>
+				</div>
+				<div class='conferencing'>
+					<p>
+						<label for='hall'>Hall</label>
+						<select id='hall' name='hall'>
+							<option value='flamingo'>Flamingo</option>
+							<option value='golden'>Golden</option>
+							<option value='mima'>Mima</option>
+						</select>
+					</p>
+					<p>
+						<label for='conference-date'>Date</label>
+						<input type='date' id='conference-date' name='conference-date' required>
+						<small>Please provide date for the conference</small>
+					</p>
+					<p>
+						<label for='conference-time'>Start Time</label>
+						<input type='time' id='conference-time' name='conference-time' required>
+						<small>Please provide time for the conference</small>
+					</p>
+					<p>
+						<label for='conference-duration'>Duration in Hours</label>
+						<input type='number' min="0" max="24" id='conference-duration' name='conference-duration' placeholder='Meeting duration' required>
+						<small>Please provide the duration the conference will take</small>
+					</p>
+				</div>
+				<div class='common'>
+					<p>
+						<label for='name'>Full Names</label>
+						<input type='text' id='name' name='name' placeholder='Yours or company`s' required>
+						<small>Please provide your name</small>
+					</p>
+					<p>
+						<label for='email'>Email Address</label>
+						<input type='email' id='email' name='email' placeholder='Email address' required>
+						<small>Please provide your email address</small>
+					</p>
+					<p>
+						<label for='tel'>Phone Number</label>
+						<input type='tel' id='tel' name='tel' placeholder='Phone number' required>
+						<small>Please provide your phone number</small>
+					</p>
+					<p>
+						<label for='instructions'>Instructions</label>
+						<textarea id='instructions' name='instructions' placeholder='Instructions or additional information'></textarea>
+					</p>
+				</div>
+				<div>
+					<p>
+						<input type='submit' value='SUBMIT'>
+						<span>SUBMIT</span>
+					</p>
+				</div>
+			</form>
+		</article>
+		<footer>
+			<section class='about'>
+				<h1>ABOUT US</h1>
+				<hr>
+				<div>
+					<img src="../src/images/ring logo.png">
+					<h2>CITYMAX<br><span>Comfort away from home</span></h2>
+				</div>
+				<p>Hotel Citymax is a blend of comfort and convinience furnished with an african theme and unique touch that turns a simple break into a treat.</p>
+			</section>
+			<section class='menu'>
+				<h1>MAIN MENU</h1>
+				<hr>
+				<p>
+					<a href="../index.html">Home</a> 
+					<a href="../accommodation/index.html">Accommodation</a> 
+					<a href="../conferencing/index.html">Conferencing</a> 
+					<a href="../restaurant/index.html">Restaurant</a> 
+				</p>
+			</section>
+			<section class='reservations' id='reservations'>
+				<h1>RESERVATIONS CONTACT</h1>
+				<hr>
+				<p>
+					<a href="mailto:info@hotelcitymax.co.ke">info@hotelcitymax.co.ke</a>
+					<a href="tel:+254711853328">+254 711 853 328</a>
+					<a href="tel:+254772296760">+254 772 296 760</a>
+					<a href="">P.O. BOX 13892 - 20100, Nakuru Kenya.</a>
+				</p>
+			</section>
+			<section class='subscription'>
+				<h1>NEWSLETTER SUBSCRIPTION</h1>
+				<hr>
+				<p>
+					Subscribe to our newsletter to receive special offers straight to your inbox.
+				</p>
+				<form>
+					<label for='email'>Email</label>
+					<input type='email' id='email' required>
+					<input type='submit' value='Subscribe'>
+				</form>
+			</section>
+			<section class='find_us'>
+				<h1>FIND US</h1>
+				<hr>
+				<p>
+					We are located at Freehold Mashindano street off the Deliverance church road.
+				</p>
+				<div class="mapouter"><div class="gmap_canvas"><iframe height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Freehold-mashindano%20street,%20Nakuru,%20Hotel%20Citymax&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/divi-discount/">divi discount</a><br><style>.mapouter{position:relative;text-align:right;height:400px;width:100%;}</style><a href="https://www.embedgooglemap.net">custom google map embed</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}</style></div></div>
+			</section>
+			<section class='social_media'>
+				<h1>CONNECT WITH US</h1>
+				<hr>
+				<p>
+					<a href="https://www.facebook.com/hotelcitymax/"></a>
+					<a href="https://www.instagram.com/citymaxhotel/"></a>
+					<a href="https:wa.me/+254711853328?"></a>
+				</p>
+			</section>
+			<section class='copyright'>
+				Copyright &copy; 2022. Hotel Citymax. All rights reserved. Website designed and developed by <a href='https://mark-code789.github.io/Portfolio/'>Mark-Codes</a>
+			</section>
+		</footer>
+		<script src='./index.js'></script>
+		<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+		</script>
+		<script type="text/javascript">
+		   (function(){
+		      emailjs.init("user_M6sgMijQU0W9fHjJQuwvA");
+		   })();
+		</script>
+	</body>
+</html>
