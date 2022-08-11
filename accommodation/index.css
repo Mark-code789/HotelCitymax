@@ -1,0 +1,673 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 1em;
+	font-family: Georgia, serif;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+} 
+
+.loader {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	z-index: 20;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.spinner {
+    position: relative;
+    border: 24px solid;
+    border-color: #005EC7  transparent #005EC7 transparent;
+    border-radius: 50%;
+    animation : rotate 2s linear infinite;
+}
+.spinner:before,
+.spinner:after {
+    content:"";
+    display: block;
+    border: 24px solid transparent;
+    border-radius: 50%;
+    border-left-color: #584193;
+    position: absolute;
+    left: -24px;
+    top: -24px;
+    animation: mvx 1s infinite linear;
+}
+.spinner:before {
+    border-color: transparent #FFBC54 transparent transparent;
+    animation-name: mvrx;
+    animation-delay: 0.5s;
+}
+@keyframes rotate {
+    100% {transform: rotate(360deg)}
+}
+@keyframes mvx {
+    20% , 80% {transform: translateX(0)}
+    50% {transform: translateX(-50%)}
+}
+@keyframes mvrx {
+    20% , 80% {transform: translateX(0)}
+    50% {transform: translateX(50%)}
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: grid;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	grid-template-columns: auto auto;
+	padding: 10px 20px;
+	background: #fffd;
+	z-index: 2;
+}
+
+header > div:first-of-type {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+	margin: auto;
+	margin-left: 0; 
+	cursor: default;
+}
+
+header > div:first-of-type img {
+	height: 70px;
+	object-fit: contain;
+	object-position: center;
+	border-radius: 50%;
+} 
+
+header > div:first-of-type h1 {
+	margin: 10px;
+	color: #584193;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+}
+
+header > div:first-of-type span {
+	font-size: 0.9rem;
+	font-style: italic;
+	color: #584193;
+	font-weight: 400;
+	white-space: nowrap;
+} 
+
+header > div:nth-of-type(2) {
+	transition: all 0.3s;
+} 
+
+header > div:nth-of-type(2).menu_toggle {
+	height: auto;
+	transform: scaleY(1);
+} 
+
+header > div:nth-of-type(2) nav {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: row wrap;
+	margin: 10px;
+}
+
+header > div:nth-of-type(2) nav a {
+	font-weight: 500;
+	margin: 0 10px;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #584193;
+	transition: all 0.3s;
+	position: relative;
+} 
+
+header > div:nth-of-type(2) nav:first-of-type {
+	background: #FFBC54AA;
+	border: 1px solid #584193;
+	border-width: 0 0 1px 0;
+	padding: 20px;
+}
+
+header > div:nth-of-type(2) nav:last-of-type a {
+	height: 20px;
+	width: 20px;
+	display: inline-block;
+	margin: 0 10px;
+	background-image: url('../src/images/facebook.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+header > div:nth-of-type(2) nav:last-of-type a:nth-of-type(1) {
+	background-image: url('../src/images/email.png');
+}
+
+header > div:nth-of-type(2) nav:last-of-type a:nth-of-type(2) {
+	background-image: url('../src/images/whatsapp.png');
+}
+
+header > div:nth-of-type(2) nav:last-of-type a:nth-of-type(3) {
+	background-image: url('../src/images/call.png');
+}
+
+header > div:nth-of-type(2) nav:last-of-type a:nth-of-type(4) {
+	background-image: url('../src/images/facebook.png');
+}
+
+header > div:nth-of-type(2) nav:last-of-type a:nth-of-type(5) {
+	background-image: url('../src/images/instagram.png');
+}
+
+header > div:nth-of-type(2) nav:first-of-type a:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 5px;
+	background: #005EC7;
+	transition: all 0.3s;
+}
+
+header > div:nth-of-type(2) nav:first-of-type a:hover {
+	color: #005EC7;
+}
+
+header > div:nth-of-type(2) nav:last-of-type a:hover {
+	transform: scale(1.2);
+}
+
+header > div:nth-of-type(2) nav:first-of-type a:hover:before {
+	width: 100%;
+}
+
+header > div:nth-of-type(2) nav:first-of-type a:last-of-type {
+	background: #005EC7;
+	color: #fff;
+}
+
+header > div:nth-of-type(2) nav:last-of-type {
+	float: right;
+}
+
+header > div:nth-of-type(2) nav:last-of-type a {
+	padding: 0 8px;
+	font-size: 0.9em;
+}
+
+header > div:last-of-type {
+	height: 30px;
+	width: 30px;
+	display: none;
+	background: url("../src/images/menu.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 5;
+} 
+
+header > div:last-of-type.menu_toggle {
+	background: url("../src/images/close.png");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+} 
+
+
+.main {
+	display: block;
+	position: relative;
+	background: #FFBC54;
+}
+
+.main section {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(#0003, #0003), url("../src/images/deluxe.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+}
+
+.main section img {
+	height: 80px;
+	width: 80px;
+	object-fit: contain;
+	object-position: center;
+	border-radius: 10px;
+} 
+
+.main section h1 {
+	color: #8361DB;
+	text-shadow: 1px 1px 0 #000;
+	text-align: center;
+	font-size: 2em;
+	font-weight: 700;
+	line-height: 2em;
+}
+
+.main section h1 span {
+	display: inline-block;
+	margin: 10px 0;
+	color: #ddd;
+	font-weight: 500;
+	text-shadow: none;
+} 
+
+.main section h1 span:nth-of-type(1) {
+	width: 100px;
+	height: 3px;
+	background: #000;
+	border: 1px solid #584193;
+} 
+
+.main section h1 span:nth-of-type(2) {
+	font-size: 1.2rem;
+} 
+
+.main a {
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	height: 30px;
+	width: 30px;
+	border: 3px solid #fff;
+	border-width: 0 2px 2px 0;
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.rooms {
+	display: block;
+	padding: 50px 0 50px 0;
+	background: #fff;
+	/*font-family: Verdana, Arial, serif;*/
+} 
+
+.rooms section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	background: #000;
+	width: 100%;
+} 
+
+.rooms section > div {
+	position: relative;
+	width: calc(50% - 40px);
+	max-width: 600px;
+	margin: 20px 10px;
+	border: 1px solid #fff;
+	background: #fff;
+	overflow: hidden;
+} 
+
+.rooms section > div:nth-of-type(odd) {
+	margin: 10px 10px 10px 20px;
+}
+
+.rooms section > div:nth-of-type(even) {
+	margin: 10px 20px 10px 10px;
+}
+
+.rooms section > div:first-of-type {
+	margin: 20px 10px 10px 20px;
+}
+
+.rooms section > div:last-of-type {
+	margin: 10px 20px 20px 10px;
+}
+
+.rooms section > div > div {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	transition: all 0.5s;
+} 
+
+.rooms section > div:hover > div {
+	background-color: #005EC744;
+} 
+
+.rooms section > div > div:first-of-type > img {
+	width: 100%;
+	object-fit: contain;
+	object-position: center;
+	transition: all 0.5s;
+} 
+
+.rooms section > div:hover > div:first-of-type > img {
+	transform: scale(1.5);
+} 
+
+.rooms section > div > div:first-of-type > span {
+	background: transparent;
+	color: #0000;
+	padding: 8px;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	aspect-ratio: 1;
+	transform: translate(-50%, -50%) rotate(-45deg);
+	transform-origin: 50% 50%;
+	overflow: visible;
+	font-weight: 500;
+} 
+
+.rooms section > div > div:first-of-type > span:before {
+	content: attr(value);
+	background: #FF3500;
+	color: #fff;
+	padding: 8px;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 200%;
+	text-align: center;
+	transform: translate(-50%, 0%);
+	box-shadow: 0 0 5px 5px #0005;
+} 
+
+.rooms section > div > div:last-of-type  {
+	text-align: center;
+} 
+
+.rooms section > div > div:last-of-type * {
+	text-align: center;
+	margin: 10px auto;
+} 
+
+.rooms section > div > div:last-of-type img {
+	width: 30px;
+	object-fit: contain;
+	margin-top: 20px;
+} 
+
+.rooms section > div > div:last-of-type h2 {
+	color: #584193;
+	font-size: 2em;
+	font-weight: 700;
+	margin: 20px 10px;
+} 
+
+.rooms section > div > div:last-of-type p {
+	font-size: 1.2em;
+	line-height: 2em;
+	color: #444;
+	padding: 0 10px;
+} 
+
+.rooms section > div > div:last-of-type p .pax {
+	font-size: 0.9em;
+} 
+
+.rooms section > div > div:last-of-type p .desc {
+	font-size: 0.7em;
+} 
+
+.rooms section > div > div:last-of-type a {
+	display: inline-block;
+	padding: 15px 20px;
+	margin: 20px 10px;
+	background: #000;
+	border: 1px solid #584193;
+	text-decoration: none;
+	color: #fff;
+} 
+
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-content: flex-start;
+	flex-flow: row wrap;
+	background: #000;
+	padding: 0;
+	font-size: 0.9em;
+} 
+
+footer section {
+	width: 100%;
+	max-width: 300px;
+	margin: 20px;
+} 
+
+footer section h1 {
+	font-size: 1.3em;
+	color: #8C51D4;
+	font-weight: 500;
+} 
+
+footer section hr {
+	height: 2px;
+	background: #333;
+	border-width: 0;
+} 
+
+footer section:not(.find_us) > div {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-flow: row wrap;
+	margin: auto;
+	margin-left: 0; 
+	cursor: default;
+}
+
+footer section:not(.find_us) > div img {
+	height: 70px;
+	object-fit: contain;
+	object-position: center;
+	border-radius: 50%;
+	filter: brightness(0%) invert(90%); 
+} 
+
+footer section:not(.find_us) > div h2 {
+	margin: 10px;
+	color: #eee;
+}
+
+footer section:not(.find_us) > div span {
+	font-size: 0.9rem;
+	font-style: italic;
+	color: #eee;
+	font-weight: 400;
+	margin: 10px 0;
+}
+
+.find_us iframe {
+	width: 100%;
+}
+
+footer section p {
+	line-height: 2em;
+	color: #eee;
+} 
+
+footer section a:hover {
+	color: #FFBC54;
+}
+
+footer section a {
+	text-decoration: none;
+	display: block;
+	color: inherit;
+} 
+
+footer section form label {
+	color: #eee;
+}
+
+footer section form input[type='email'] {
+	margin: 10px 0;
+	background: transparent;
+	color: #eee;
+	padding: 10px 10px;
+	width: 100%;
+	border-radius: 8px;
+	border: 2px solid #333;
+}
+
+footer section form input[type='submit'] {
+	margin: 10px 0;
+	background: #8C51D4;
+	color: #eee;
+	padding: 10px 10px;
+	width: 100%;
+	border-radius: 8px;
+}
+
+footer section form input[type='submit']:hover {
+	background: #FFBC54;
+	color: #333;
+}
+
+footer .reservations a {
+	position: relative;
+	padding-left: 30px;
+}
+
+footer .reservations a:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 20px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	filter: brightness(0%) invert(90%);
+}
+
+footer .reservations a:nth-of-type(1):before {
+	background-image: url("../src/images/email.png");
+}
+
+footer .reservations a:nth-of-type(2):before {
+	background-image: url("../src/images/call.png");
+}
+
+footer .reservations a:nth-of-type(3):before {
+	background-image: url("../src/images/call.png");
+}
+
+footer .reservations a:nth-of-type(4):before {
+	height: 0;
+}
+
+footer .reservations a:nth-of-type(4) {
+	padding-left: 10px;
+}
+
+footer .social_media a {
+	height: 20px;
+	width: 20px;
+	display: inline-block;
+	margin: 0 10px;
+	background-image: url('../src/images/facebook.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	filter: grayscale(100%) brightness(0%) invert(90%);
+}
+
+footer .social_media a:nth-of-type(2) {
+	background-image: url('../src/images/instagram.png');
+}
+
+footer .social_media a:nth-of-type(3) {
+	background-image: url('../src/images/whatsapp.png');
+}
+
+footer .social_media a:hover {
+	transform: scale(1.2);
+}
+
+footer .copyright {
+	margin: 0;
+	max-width: 100%;
+	padding: 20px 10px;
+	background: #333;
+	color: #aaa;
+	text-align: center;
+	line-height: 2em;
+}
+
+footer .copyright a {
+	color: #ccc;
+	display: inline-block;
+}
+
+
+/* all mobile devices and handhelds */
+@media only screen and (min-width: 320px) and (max-width: 812px) {
+	header > div:nth-of-type(2) {
+		display: block;
+		grid-area: 2 / 1 / 3 / 3;
+		overflow: hidden;
+		height: 0;
+		transform: scaleY(0);
+	} 
+	header > div:nth-of-type(2) nav:first-of-type {
+		flex-flow: column nowrap;
+		padding: 0;
+		margin: 10px 0 0 0;
+		background: transparent;
+		border-width: 1px 0 0 0;
+	} 
+	header > div:nth-of-type(2) nav:first-of-type a {
+		margin: 0;
+		padding: 10px 0;
+		background: transparent !important;
+		color: #584193 !important;
+	} 
+	header > div:nth-of-type(2) nav:last-of-type {
+		/*display: none;*/
+	} 
+	header div:nth-of-type(3) {
+		display: block;
+	} 
+	header > div:first-of-type {
+		flex-flow: row nowrap;
+	} 
+	
+	.rooms section > div {
+		width: 100%;
+		margin: 10px 20px !important;
+	}
+	
+	.rooms section > div:first-of-type {
+		margin: 20px 20px 10px 20px !important;
+	}
+	
+	.rooms section > div:last-of-type {
+		margin: 10px 20px 20px 20px !important;
+	}
+	
+	footer section {
+		max-width: 100%;
+	} 
+} 
