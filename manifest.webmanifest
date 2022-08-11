@@ -1,0 +1,87 @@
+{
+    "short_name": "Citymax",
+    "name": "Hotel Citymax",
+    "description": "Find accommodation, restaurant and conference services at affordable prices.",
+    "icons": [
+        {
+            "src": "./src/images/icon 48x48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "./src/images/icon 96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "./src/images/icon 144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "./src/images/icon 192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }, 
+        {
+            "src": "./src/images/icon 256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }, 
+        {
+            "src": "./src/images/icon 512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "id": "./1.1.1.1", 
+    "categories": ["lifestyle", "recreation", "tourism", "holiday", "hotel", "restaurant", "conference", "accommodation"], 
+    "start_url": "./index.html", 
+    "display": "standalone",
+    "orientation": "natural",
+    "theme_color": "#fff",
+    "background_color": "#fff", 
+    "prefer_related_applications": false, 
+    "screenshots": [
+    	{
+	    	"src": "./src/images/load page.png",
+	    	"sizes": "720x1500",
+	    	"type": "image/png"
+		}, 
+    	{
+	    	"src": "./src/images/main page.png",
+	    	"sizes": "720x1500",
+	    	"type": "image/png"
+		}, 
+		{
+	    	"src": "./src/images/menu page.png",
+	    	"sizes": "720x1500",
+	    	"type": "image/png"
+		}, 
+		{
+	    	"src": "./src/images/scan page.png",
+	    	"sizes": "720x1500",
+	    	"type": "image/png"
+		}, 
+		{
+	    	"src": "./src/images/crop page.png",
+	    	"sizes": "720x1500",
+	    	"type": "image/png"
+		}, 
+		{
+	    	"src": "./src/images/recharged page.png",
+	    	"sizes": "720x1500",
+	    	"type": "image/png"
+		}, 
+		{
+	    	"src": "./src/images/confirm page.png",
+	    	"sizes": "720x1500",
+	    	"type": "image/png"
+		}, 
+		{
+	    	"src": "./src/images/other number page.png",
+	    	"sizes": "720x1500",
+	    	"type": "image/png"
+		}
+    ]
+}
