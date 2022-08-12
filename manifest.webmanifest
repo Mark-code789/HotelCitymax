@@ -34,54 +34,40 @@
             "type": "image/png"
         }
     ],
-    "id": "./1.1.1.1", 
-    "categories": ["lifestyle", "recreation", "tourism", "holiday", "hotel", "restaurant", "conference", "accommodation"], 
+    "id": "./2", 
+    "categories": ["lifestyle", "recreation", "tourism", "holiday", "hotel", "restaurant", "conferencing", "accommodation"], 
     "start_url": "./index.html", 
     "display": "standalone",
     "orientation": "natural",
     "theme_color": "#fff",
     "background_color": "#fff", 
     "prefer_related_applications": false, 
-    "screenshots": [
+    "shortcuts": [
     	{
-	    	"src": "./src/images/load page.png",
-	    	"sizes": "720x1500",
-	    	"type": "image/png"
-		}, 
+    		"name": "Book Now", 
+    		"description": "Book your stay with us. Accommodation or conferencing.", 
+    		"url": "./book-now/index.html", 
+    		"icons": [
+    			{
+    				"src": "./src/images/book now.png",
+    				"sizes": "96x96",
+    				"type": "image/png", 
+    				"purpose": "any"
+    			} 
+    		] 
+    	}, 
     	{
-	    	"src": "./src/images/main page.png",
-	    	"sizes": "720x1500",
-	    	"type": "image/png"
-		}, 
-		{
-	    	"src": "./src/images/menu page.png",
-	    	"sizes": "720x1500",
-	    	"type": "image/png"
-		}, 
-		{
-	    	"src": "./src/images/scan page.png",
-	    	"sizes": "720x1500",
-	    	"type": "image/png"
-		}, 
-		{
-	    	"src": "./src/images/crop page.png",
-	    	"sizes": "720x1500",
-	    	"type": "image/png"
-		}, 
-		{
-	    	"src": "./src/images/recharged page.png",
-	    	"sizes": "720x1500",
-	    	"type": "image/png"
-		}, 
-		{
-	    	"src": "./src/images/confirm page.png",
-	    	"sizes": "720x1500",
-	    	"type": "image/png"
-		}, 
-		{
-	    	"src": "./src/images/other number page.png",
-	    	"sizes": "720x1500",
-	    	"type": "image/png"
-		}
-    ]
+    		"name": "Order Now", 
+    		"description": "Order any food or refreshments from our restaurant.", 
+    		"url": "./order-now/index.html", 
+    		"icons": [
+    			{
+    				"src": "./src/images/order now.png",
+    				"sizes": "96x96",
+    				"type": "image/png", 
+    				"purpose": "any"
+    			} 
+    		] 
+    	}
+    ] 
 }
