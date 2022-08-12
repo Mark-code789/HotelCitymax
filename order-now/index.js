@@ -137,6 +137,6 @@ window.onload = () => {
 		} 
 	});
 	
-	//document.querySelector('.loader').style.display = 'none';
-	//document.body.style.overflow = 'auto';
+	document.querySelector('.loader').style.display = 'none';
+	document.body.style.overflow = 'auto';
 }
