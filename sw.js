@@ -1,4 +1,4 @@
-let version = "1";
+let version = "2";
 let cacheName = "HotelCitymax-v:" + version;
 let sharedData = {};
 let appShellFiles = [
